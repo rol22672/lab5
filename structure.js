@@ -278,7 +278,7 @@ async function getMessage() {
         console.error('Ha ocurrido un error:', error);
     }
 }
-//setInterval(getMessage,10000)
+setInterval(getMessage,10000)
 
 function setMessagetoPanel(){
 
