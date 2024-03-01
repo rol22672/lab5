@@ -65,6 +65,11 @@ inputTextSearch.addEventListener('input', function(e) {
         chatsArray = chatsFiltrados;
         messagePanel.innerHTML = "";
         setMessagetoPanel();
+
+        var enlaces = document.querySelectorAll('a'); // Seleccionar todos los elementos <a>
+        enlaces.forEach(function(enlace) {
+            enlace.style.overflowWrap = 'break-word'; // Aplicar el estilo a cada enlace
+        });
     }else{
         getMessage();
     }
@@ -272,7 +277,10 @@ async function getMessage() {
 
         }
         setMessagetoPanel();
-
+        var enlaces = document.querySelectorAll('a'); // Seleccionar todos los elementos <a>
+        enlaces.forEach(function(enlace) {
+            enlace.style.overflowWrap = 'break-word'; // Aplicar el estilo a cada enlace
+        });
         
     } catch (error) {
         console.error('Ha ocurrido un error:', error);
